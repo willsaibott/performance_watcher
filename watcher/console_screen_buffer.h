@@ -259,10 +259,10 @@ namespace console {
         std::int16_t                       _y{ 0 };
         WORD                               _attr{ color_t::WHITE };
         //std::vector<CHAR_INFO*>            _grid;
-        CHAR_INFO                          _grid[50][50];
+        CHAR_INFO                          _grid[50][50] = {{}};
         handle_t                           _handle{ INVALID_HANDLE_VALUE };
         handle_t                           _old_handle{ INVALID_HANDLE_VALUE };
-        CONSOLE_SCREEN_BUFFER_INFO         _info;
+        CONSOLE_SCREEN_BUFFER_INFO         _info{};
     };
 }
 
